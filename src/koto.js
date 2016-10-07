@@ -7,7 +7,7 @@ class Koto extends Component {
         console.log("Starting koto");
     }
 
-    render() {
+    render_category() {
         var color = this.props.color;
         var divStyle = {
             backgroundColor: color,
@@ -24,6 +24,10 @@ class Koto extends Component {
                 <Category key={this.props.category.id} category={this.props.category}/>
             </div>
         </div>)
+    }
+
+    render() {
+        return this.render_category();
     }
 }
 
